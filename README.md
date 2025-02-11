@@ -86,14 +86,6 @@ L’API est maintenant accessible sur **http://127.0.0.1:5000**
 
 ---
 
-## 📊 Statistiques du projet  
-
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=A2B78&layout=compact&theme=tokyonight)  
-
-
----
-
 ## 🎯 Technologies Utilisées  
 🔹 **Flask** - Framework web Python  
 🔹 **Flask-JWT-Extended** - Gestion des tokens JWT  
