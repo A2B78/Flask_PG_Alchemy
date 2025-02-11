@@ -88,9 +88,9 @@ L’API est maintenant accessible sur **http://127.0.0.1:5000**
 
 ## 📊 Statistiques du projet  
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=A2B78&show_icons=true&theme=tokyonight)  
+
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=A2B78&layout=compact&theme=tokyonight)  
-![Trophées GitHub](https://github-profile-trophy.vercel.app/?username=A2B78&theme=darkhub)  
+
 
 ---
 
