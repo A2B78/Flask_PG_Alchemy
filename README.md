@@ -1,99 +1,84 @@
-📂 **Structure du projet**
-```
-/backend
-│── app.py               # Point d'entrée principal
-│── config.py            # Configuration de l'application
-│── models.py            # Définition des modèles SQLAlchemy
-│── extensions.py        # Initialisation des extensions (DB, JWT, etc.)
-│── routes/
-│   │── auth.py          # Routes d'authentification
-│   │── users.py         # Gestion des utilisateurs (admin)
-│── migrations/          # Dossier pour Flask-Migrate
-│── .env                 # Variables d'environnement
-│── requirements.txt     # Dépendances
-│── README.md            # Tuto détaillé
+# 🚀 API Flask avec JWT, PostgreSQL et Gestion des Utilisateurs  
+
+Une API RESTful construite avec **Flask**, utilisant **JWT** pour l’authentification, une **base de données PostgreSQL**, et proposant des fonctionnalités avancées comme la gestion des utilisateurs, la pagination et la révocation des tokens.  
+
+## 📌 Fonctionnalités  
+✅ **Authentification JWT** (Access & Refresh Tokens)  
+✅ **Rafraîchissement automatique des tokens**  
+✅ **Inscription et connexion des utilisateurs**  
+✅ **Gestion des utilisateurs** (ajout, modification, suppression)  
+✅ **Promotion en administrateur**  
+✅ **Révocation des tokens** (déconnexion sécurisée)  
+✅ **Pagination des utilisateurs**  
+✅ **Sécurisation avec rôles utilisateur/admin**  
+
+## 🏗️ Installation  
+
+1️⃣ **Cloner le dépôt**  
+```bash
+git clone https://github.com/A2B78/Flask_PG_Alchemy.git  
+cd Flask_PG_Alchemy  
 ```
 
-### .env (Fichier des variables d'environnement)**
+2️⃣ **Créer un environnement virtuel et installer les dépendances**  
+```bash
+python -m venv venv  
+source venv/bin/activate  # Linux/macOS  
+venv\\Scripts\\activate  # Windows  
+pip install -r requirements.txt  
+```
+
+3️⃣ **Configurer les variables d’environnement**  
+Créer un fichier `.env` et ajouter :  
 ```env
-DATABASE_URL=postgresql://user:password@localhost/dbname
-JWT_SECRET_KEY=supersecretkey
-ACCESS_TOKEN_EXPIRES=900  # 15 minutes
-REFRESH_TOKEN_EXPIRES=604800  # 7 jours
+DATABASE_URL=postgresql://user:password@localhost/dbname  
+JWT_SECRET_KEY=supersecretkey  
+ACCESS_TOKEN_EXPIRES=900  
+REFRESH_TOKEN_EXPIRES=604800  
 ```
 
-### requirements.txt (Dépendances du projet)**
-```txt
-Flask
-Flask-SQLAlchemy
-Flask-Migrate
-Flask-JWT-Extended
-python-dotenv
-Werkzeug
-psycopg2-binary
-```
-
-### README.md (Tuto détaillé pas à pas)**
-```md
-# 🚀 Backend Flask avec Authentification et PostgreSQL
-
-##  Installation et configuration
-
-### 📥 Cloner le projet
+4️⃣ **Initialiser la base de données**  
 ```bash
-git clone https://github.com/A2B78/Flask_PG_Alchemy.git
-cd Flask_PG_Alchemy
+flask db init  
+flask db migrate -m "Initial migration"  
+flask db upgrade  
 ```
 
-### 🏗️ Créer un environnement virtuel
+5️⃣ **Lancer le serveur**  
 ```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
+flask run  
 ```
 
-### 📦 Installer les dépendances
-```bash
-pip install -r requirements.txt
-```
+L’API est maintenant accessible sur **http://127.0.0.1:5000**  
 
-### ⚙️ Configurer les variables d'environnement
-Créer un fichier `.env` à la racine du projet et ajouter :
-```env
-DATABASE_URL=postgresql://user:password@localhost/dbname
-JWT_SECRET_KEY=supersecretkey
-ACCESS_TOKEN_EXPIRES=900
-REFRESH_TOKEN_EXPIRES=604800
-```
+---
 
-##  Configuration de la base de données
+## 🔐 Endpoints Principaux  
 
-### 🎲 Initialiser la base de données
-```bash
-flask db init
-flask db migrate -m "Initial migration"
-flask db upgrade
-```
+### Authentification  
+- `POST /auth/register` → Inscription d’un utilisateur  
+- `POST /auth/login` → Connexion et récupération des tokens  
+- `POST /auth/refresh` → Rafraîchir le token d’accès  
+- `DELETE /auth/logout` → Révocation du token  
 
-##  Lancer l'application
-```bash
-python app.py
-```
-L'API est maintenant accessible sur `http://127.0.0.1:5000`
+### Gestion des utilisateurs  
+- `GET /users/` → Liste des utilisateurs (avec pagination)  
+- `PUT /users/<id>` → Modifier un utilisateur  
+- `DELETE /users/<id>` → Supprimer un utilisateur  
+- `UPDATE user SET role='admin' WHERE username='testuser';` → Promotion en admin  
 
-##  Tester l'authentification
+---
 
-### 🔐 Inscription d'un utilisateur
-```bash
-curl -X POST http://127.0.0.1:5000/auth/register -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass"}'
-```
+## 🎯 Technologies Utilisées  
+🔹 **Flask** - Framework web Python  
+🔹 **Flask-JWT-Extended** - Gestion des tokens JWT  
+🔹 **SQLAlchemy** - ORM pour PostgreSQL  
+🔹 **Flask-Migrate** - Gestion des migrations  
+🔹 **Dotenv** - Chargement des variables d’environnement  
 
-### 🔑 Connexion
-```bash
-curl -X POST http://127.0.0.1:5000/auth/login -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass"}'
-```
+---
 
-Cela retournera un **access token** et un **refresh token** que vous pourrez utiliser pour accéder aux routes protégées.
+## 🤝 Contribuer  
+Les contributions sont les bienvenues ! Ouvrez une issue ou faites une pull request pour améliorer le projet.  
 
-🎉 **Votre backend Flask avec authentification JWT et PostgreSQL est maintenant opérationnel !** 🚀
-```
+🚀 **Star ce projet si tu le trouves utile !** 🌟  
