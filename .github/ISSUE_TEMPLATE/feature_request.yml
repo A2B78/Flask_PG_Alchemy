@@ -1,0 +1,45 @@
+name: ✨ Feature Request
+description: Proposer une nouvelle fonctionnalité pour l’API Flask
+title: "[FEATURE] - "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## ✨ Demande de Fonctionnalité\nExplique ta suggestion pour améliorer l’API."
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: "Nom de la fonctionnalité"
+      description: "Donne un titre clair à ta demande."
+      placeholder: "Ex: Ajout d’un système de rôles avancé"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Explique en détail la nouvelle fonctionnalité souhaitée."
+      placeholder: "Ex: Ajouter un middleware pour gérer les permissions des rôles admin/user."
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "Pourquoi cette fonctionnalité ?"
+      description: "Explique pourquoi cette amélioration est utile."
+      placeholder: "Ex: Cela permettrait de mieux contrôler les accès aux endpoints."
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: "Proposition d’implémentation"
+      description: "As-tu une idée de comment coder cette fonctionnalité ?"
+      placeholder: "Ex: Ajouter un décorateur `@require_role('admin')` sur certaines routes."
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "Validation"
+      options:
+        - label: "J'ai vérifié qu’un ticket similaire n’existe pas déjà."
+          required: true

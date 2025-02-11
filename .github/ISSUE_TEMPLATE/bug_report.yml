@@ -1,0 +1,76 @@
+name: 🐞 Bug Report
+description: Signaler un bug dans l’API Flask
+title: "[BUG] - "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## 🐞 Signaler un Bug\nMerci de fournir un maximum d’informations sur ce problème."
+  
+  - type: input
+    id: environment
+    attributes:
+      label: "Environnement"
+      description: "Sur quel environnement le bug est-il observé ?"
+      placeholder: "Ex: Ubuntu 22.04, Windows 10, macOS Ventura..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description du problème"
+      description: "Décris en détail le bug rencontré."
+      placeholder: "Ex: Lorsque j'essaie de me connecter, j'obtiens une erreur 500..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Étapes pour reproduire le bug"
+      description: "Fournis les étapes précises pour reproduire le problème."
+      placeholder: |
+        1. Démarrer l’API avec `python app.py`
+        2. Se rendre sur `POST /auth/login`
+        3. Envoyer les identifiants de connexion
+        4. Voir l'erreur
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Résultat attendu"
+      description: "Qu’attendais-tu comme comportement normal ?"
+      placeholder: "Ex: L'utilisateur devrait recevoir un token JWT valide."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs ou messages d’erreur"
+      description: "Ajoute ici les logs ou captures d’écran du bug."
+      render: shell
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorité"
+      description: "Quelle est la gravité de ce bug ?"
+      options:
+        - 🟢 Mineur
+        - 🟡 Modéré
+        - 🔴 Critique
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "Confirmation"
+      options:
+        - label: "J'ai vérifié qu'un ticket similaire n'existe pas déjà."
+          required: true
