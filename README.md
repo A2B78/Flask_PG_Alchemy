@@ -7,7 +7,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/A2B78/Flask_PG_Alchemy?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/A2B78/Flask_PG_Alchemy?style=for-the-badge)
 ![GitHub stars](https://img.shields.io/github/stars/A2B78/Flask_PG_Alchemy?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/A2B78/Flask_PG_Alchemy?style=for-the-badge) 
+![GitHub](https://img.shields.io/github/license/A2B78/Flask_PG_Alchemy) 
 
 ## 📌 Description  
 
