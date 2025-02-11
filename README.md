@@ -97,4 +97,3 @@ Cela retournera un **access token** et un **refresh token** que vous pourrez uti
 
 🎉 **Votre backend Flask avec authentification JWT et PostgreSQL est maintenant opérationnel !** 🚀
 ```
----
