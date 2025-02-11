@@ -1,7 +1,3 @@
-Merci pour le lien ! Voici un README optimisé avec tous les badges et widgets adaptés à ton dépôt GitHub.  
-
----
-
 # 🚀 Flask_PG_Alchemy - API Flask avec PostgreSQL & JWT  
 
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -111,7 +107,3 @@ L’API est maintenant accessible sur **http://127.0.0.1:5000**
 Les contributions sont les bienvenues ! Ouvrez une issue ou faites une pull request pour améliorer le projet.  
 
 🚀 **N'oubliez pas de mettre une ⭐ si vous trouvez ce projet utile !** 🌟  
-
----
-
-### 🎯 Copie ce texte dans ton **README.md** pour optimiser la présentation de ton dépôt GitHub ! 🚀
