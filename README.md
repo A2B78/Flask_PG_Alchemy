@@ -14,7 +14,7 @@
 │── README.md            # Tuto détaillé
 ```
 
-### **1. .env (Fichier des variables d'environnement)**
+### .env (Fichier des variables d'environnement)**
 ```env
 DATABASE_URL=postgresql://user:password@localhost/dbname
 JWT_SECRET_KEY=supersecretkey
@@ -22,7 +22,7 @@ ACCESS_TOKEN_EXPIRES=900  # 15 minutes
 REFRESH_TOKEN_EXPIRES=604800  # 7 jours
 ```
 
-### **2. requirements.txt (Dépendances du projet)**
+### requirements.txt (Dépendances du projet)**
 ```txt
 Flask
 Flask-SQLAlchemy
@@ -33,11 +33,11 @@ Werkzeug
 psycopg2-binary
 ```
 
-### **3. README.md (Tuto détaillé pas à pas)**
+### README.md (Tuto détaillé pas à pas)**
 ```md
 # 🚀 Backend Flask avec Authentification et PostgreSQL
 
-## 1️⃣ Installation et configuration
+##  Installation et configuration
 
 ### 📥 Cloner le projet
 ```bash
@@ -66,7 +66,7 @@ ACCESS_TOKEN_EXPIRES=900
 REFRESH_TOKEN_EXPIRES=604800
 ```
 
-## 2️⃣ Configuration de la base de données
+##  Configuration de la base de données
 
 ### 🎲 Initialiser la base de données
 ```bash
@@ -75,13 +75,13 @@ flask db migrate -m "Initial migration"
 flask db upgrade
 ```
 
-## 3️⃣ Lancer l'application
+##  Lancer l'application
 ```bash
 python app.py
 ```
 L'API est maintenant accessible sur `http://127.0.0.1:5000`
 
-## 4️⃣ Tester l'authentification
+##  Tester l'authentification
 
 ### 🔐 Inscription d'un utilisateur
 ```bash
